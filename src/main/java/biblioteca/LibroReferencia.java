@@ -9,7 +9,7 @@ public class LibroReferencia extends Libro {
     }
 
     @Override
-    public void prestarA(String dni, LocalDate fechaDevolucion) {
+    public void prestarA(String dni) {
         // Como no se pueden prestar, ponemos que se prestan a SALA
         this.prestadoA = "SALA";
         this.fechaDevolucion = LocalDate.now();
