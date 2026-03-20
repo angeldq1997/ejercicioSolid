@@ -3,22 +3,16 @@ package mensajes;
 public class App {
 
     public static void main(String[] args) {
-        GeneradorTextoMensajes generador = new GeneradorTextoMensajes();
 
-        Mensaje aviso = new Mensaje(
-                TipoMensaje.AVISO,
+        Aviso aviso = new Aviso(
                 "intranet",
                 "Grupo SMR1",
                 "Cambio de aula",
                 "Hoy la clase será en el aula 2.3 por mantenimiento.",
-                "2026-02-26",
-                null,
-                null,
-                null
+                "2026-02-26"
         );
 
-        Mensaje incidencia = new Mensaje(
-                TipoMensaje.INCIDENCIA,
+        Incidencia incidencia = new Incidencia(
                 "correo",
                 "Tutor/a",
                 "Retraso reiterado",
@@ -29,7 +23,7 @@ public class App {
                 "ALTA"
         );
 
-        System.out.println(generador.generar(aviso));
-        System.out.println(generador.generar(incidencia));
+        System.out.println(aviso.generar());
+        System.out.println(incidencia.generar());
     }
 }
